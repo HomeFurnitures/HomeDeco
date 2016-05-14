@@ -12,6 +12,7 @@
 
     <TextView
         android:id="@+id/txtUsername"
+        android:labelFor="@id/etRegUsername"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,13 +20,13 @@
 
     <EditText
         android:id="@+id/etRegUsername"
-        android:labelFor="@id/etRegUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
 
     <TextView
         android:id="@+id/txtPassword"
+        android:labelFor="@id/etRegPassword"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,13 +34,13 @@
 
     <EditText
         android:id="@+id/etRegPassword"
-        android:labelFor="@id/etRegPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword" />
 
     <TextView
         android:id="@+id/txtFirstName"
+        android:labelFor="@id/etRegFirstName"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,13 +48,13 @@
 
     <EditText
         android:id="@+id/etRegFirstName"
-        android:labelFor="@id/etRegFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"/>
 
     <TextView
         android:id="@+id/txtLastName"
+        android:labelFor="@id/etRegLastName"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,13 +62,13 @@
 
     <EditText
         android:id="@+id/etRegLastName"
-        android:labelFor="@id/etRegLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"/>
 
     <TextView
         android:id="@+id/txtEmail"
+        android:labelFor="@id/etRegEmail"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,13 +76,13 @@
 
     <EditText
         android:id="@+id/etRegEmail"
-        android:labelFor="@id/etRegEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress" />
 
     <TextView
         android:id="@+id/txtAddress"
+        android:labelFor="@id/etRegAddress"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,13 +90,13 @@
 
     <EditText
         android:id="@+id/etRegAddress"
-        android:labelFor="@id/etRegAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
 
     <TextView
         android:id="@+id/txtAddressNumber"
+        android:labelFor="@id/etRegAddressNumber"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -103,13 +104,13 @@
 
     <EditText
         android:id="@+id/etRegAddressNumber"
-        android:labelFor="@id/etRegAddressNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"/>
 
     <TextView
         android:id="@+id/txtTK"
+        android:labelFor="@id/etRegTK"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,13 +118,13 @@
 
     <EditText
         android:id="@+id/etRegTK"
-        android:labelFor="@id/etRegTK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"/>
 
     <TextView
         android:id="@+id/txtCity"
+        android:labelFor="@id/etRegCity"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,13 +132,13 @@
 
     <EditText
         android:id="@+id/etRegCity"
-        android:labelFor="@id/etRegCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
 
     <TextView
         android:id="@+id/txtState"
+        android:labelFor="@id/etRegState"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -145,13 +146,13 @@
 
     <EditText
         android:id="@+id/etRegState"
-        android:labelFor="@id/etRegState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
 
     <TextView
         android:id="@+id/txtCountry"
+        android:labelFor="@id/etRegCountry"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,13 +160,13 @@
 
     <EditText
         android:id="@+id/etRegCountry"
-        android:labelFor="@id/etRegCountry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
 
     <TextView
         android:id="@+id/txtPhone"
+        android:labelFor="@id/etRegPhone"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -173,13 +174,13 @@
 
     <EditText
         android:id="@+id/etRegPhone"
-        android:labelFor="@id/etRegPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone" />
 
     <TextView
         android:id="@+id/txtMobilePhone"
+        android:labelFor="@id/etRegMobilePhone"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -187,7 +188,6 @@
 
     <EditText
         android:id="@+id/etRegMobilePhone"
-        android:labelFor="@id/etRegMobilePhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"/>
