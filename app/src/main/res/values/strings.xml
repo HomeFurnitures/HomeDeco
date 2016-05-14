@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">HomeDeco</string>
+    <string name="username">Όνομα Χρήστη</string>
+    <string name="password">Κωδικός</string>
+    <string name="last_name">Επώνυμο</string>
+    <string name="first_name">Όνομα</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="register">Εγγραφή</string>
+    <string name="address">Διεύθυνση</string>
+    <string name="address_number">Νούμερο</string>
+    <string name="postal_code">Τ.Κ.</string>
+    <string name="city">Πόλη</string>
+    <string name="state">Νομός</string>
+    <string name="country">Χώρα</string>
+    <string name="phone">Σταθερό</string>
+    <string name="mobilePhone">Κινητό</string>
 </resources>
