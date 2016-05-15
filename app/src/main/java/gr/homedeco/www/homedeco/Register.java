@@ -38,12 +38,16 @@ public class Register extends AppCompatActivity {
         String email = etEmail.getText().toString();
         String address = etAddress.getText().toString();
         int addressNumber = Integer.parseInt(etAddressNumber.getText().toString());
-        int TK = Integer.parseInt(etTK.getText().toString());
+        int postalCode = Integer.parseInt(etTK.getText().toString());
         String city = etCity.getText().toString();
         String state = etState.getText().toString();
         String country = etCountry.getText().toString();
         String phone = etPhone.getText().toString();
         String mobilePhone = etMobilePhone.getText().toString();
+
+        /*User userToRegister = new User(username, password, email, firstName,
+                 lastName, birthday, address, addressNumber, postalCode,
+         city, state, country, phone, mobilePhone);*/
 
     }
 }

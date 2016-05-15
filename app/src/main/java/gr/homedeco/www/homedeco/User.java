@@ -12,6 +12,25 @@ public class User {
         this.password = password;
     }
 
+    public User(String username, String password, String email, String firstName,
+                String lastName, String birthday, String address, int addressNumber, int postalCode,
+                String city, String state, String country, String phone, String mobilePhone) {
+        this.addressNumber = addressNumber;
+        this.postalCode = postalCode;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = birthday;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.phone = phone;
+        this.mobilePhone = mobilePhone;
+    }
+
     public User(int userID, String username, String password, String email, String firstName,
                 String lastName, String birthday, String address, int addressNumber, int postalCode,
                 String city, String state, String country, String phone, String mobilePhone) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,198 +7,212 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context="gr.homedeco.www.homedeco.Register" >
 
-    <TextView
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
         android:id="@+id/txtUsername"
-        android:labelFor="@id/etRegUsername"
+        android:labelFor="@+id/etRegUsername"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/username" />
 
-    <EditText
-        android:id="@+id/etRegUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"/>
+        <EditText
+            android:id="@id/etRegUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
-    <TextView
-        android:id="@+id/txtPassword"
-        android:labelFor="@id/etRegPassword"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/password" />
+        <TextView
+            android:id="@+id/txtPassword"
+            android:labelFor="@+id/etRegPassword"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password" />
 
-    <EditText
-        android:id="@+id/etRegPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@id/etRegPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/txtFirstName"
-        android:labelFor="@id/etRegFirstName"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_name" />
+        <View
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/light_gray" />
 
-    <EditText
-        android:id="@+id/etRegFirstName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"/>
+        <TextView
+            android:id="@+id/txtFirstName"
+            android:labelFor="@+id/etRegFirstName"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name" />
 
-    <TextView
-        android:id="@+id/txtLastName"
-        android:labelFor="@id/etRegLastName"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/last_name" />
+        <EditText
+            android:id="@id/etRegFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
 
-    <EditText
-        android:id="@+id/etRegLastName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"/>
+        <TextView
+            android:id="@+id/txtLastName"
+            android:labelFor="@+id/etRegLastName"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_name" />
 
-    <TextView
-        android:id="@+id/txtEmail"
-        android:labelFor="@id/etRegEmail"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email" />
+        <EditText
+            android:id="@id/etRegLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
 
-    <EditText
-        android:id="@+id/etRegEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress" />
+        <TextView
+            android:id="@+id/txtEmail"
+            android:labelFor="@+id/etRegEmail"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email" />
 
-    <TextView
-        android:id="@+id/txtAddress"
-        android:labelFor="@id/etRegAddress"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/address" />
+        <EditText
+            android:id="@id/etRegEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/etRegAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"/>
+        <TextView
+            android:id="@+id/txtAddress"
+            android:labelFor="@+id/etRegAddress"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address" />
 
-    <TextView
-        android:id="@+id/txtAddressNumber"
-        android:labelFor="@id/etRegAddressNumber"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/address_number" />
+        <EditText
+            android:id="@id/etRegAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
-    <EditText
-        android:id="@+id/etRegAddressNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+        <TextView
+            android:id="@+id/txtAddressNumber"
+            android:labelFor="@+id/etRegAddressNumber"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_number" />
 
-    <TextView
-        android:id="@+id/txtTK"
-        android:labelFor="@id/etRegTK"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/postal_code" />
+        <EditText
+            android:id="@id/etRegAddressNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
 
-    <EditText
-        android:id="@+id/etRegTK"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+        <TextView
+            android:id="@+id/txtTK"
+            android:labelFor="@+id/etRegTK"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/postal_code" />
 
-    <TextView
-        android:id="@+id/txtCity"
-        android:labelFor="@id/etRegCity"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/city" />
+        <EditText
+            android:id="@id/etRegTK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
 
-    <EditText
-        android:id="@+id/etRegCity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"/>
+        <TextView
+            android:id="@+id/txtCity"
+            android:labelFor="@+id/etRegCity"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city" />
 
-    <TextView
-        android:id="@+id/txtState"
-        android:labelFor="@id/etRegState"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/state" />
+        <EditText
+            android:id="@id/etRegCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
-    <EditText
-        android:id="@+id/etRegState"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"/>
+        <TextView
+            android:id="@+id/txtState"
+            android:labelFor="@+id/etRegState"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state" />
 
-    <TextView
-        android:id="@+id/txtCountry"
-        android:labelFor="@id/etRegCountry"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/country" />
+        <EditText
+            android:id="@id/etRegState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
-    <EditText
-        android:id="@+id/etRegCountry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"/>
+        <TextView
+            android:id="@+id/txtCountry"
+            android:labelFor="@+id/etRegCountry"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country" />
 
-    <TextView
-        android:id="@+id/txtPhone"
-        android:labelFor="@id/etRegPhone"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/phone" />
+        <EditText
+            android:id="@id/etRegCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
-    <EditText
-        android:id="@+id/etRegPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone" />
+        <TextView
+            android:id="@+id/txtPhone"
+            android:labelFor="@+id/etRegPhone"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone" />
 
-    <TextView
-        android:id="@+id/txtMobilePhone"
-        android:labelFor="@id/etRegMobilePhone"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mobilePhone" />
+        <EditText
+            android:id="@id/etRegPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
 
-    <EditText
-        android:id="@+id/etRegMobilePhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone"/>
+        <TextView
+            android:id="@+id/txtMobilePhone"
+            android:labelFor="@+id/etRegMobilePhone"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobilePhone" />
 
-    <Button
-        android:id="@+id/bRegister"
-        android:text="@string/register"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@id/etRegMobilePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"/>
 
+        <Button
+            android:id="@+id/bRegister"
+            android:text="@string/register"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
