@@ -18,4 +18,8 @@
     <string name="remember_me">Αποθήκευση στοιχείων</string>
     <string name="content_description">ImageView</string>
     <string name="message">Μήνυμα:</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="logout">Αποσύνδεση</string>
+    <string name="about_us">Λίγα λόγια..</string>
+    <string name="how_to">Οδηγίες</string>
 </resources>
