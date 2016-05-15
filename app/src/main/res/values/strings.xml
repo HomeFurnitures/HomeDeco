@@ -16,4 +16,6 @@
     <string name="phone">Σταθερό</string>
     <string name="mobilePhone">Κινητό</string>
     <string name="remember_me">Αποθήκευση στοιχείων</string>
+    <string name="content_description">ImageView</string>
+    <string name="message">Μήνυμα:</string>
 </resources>

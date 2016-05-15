@@ -28,6 +28,11 @@
             android:label="Είσοδος Χρήστη"
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".PrivateMessage"
+            android:label="Συνομιλία"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>
