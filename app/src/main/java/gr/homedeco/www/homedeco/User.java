@@ -4,7 +4,7 @@ package gr.homedeco.www.homedeco;
 public class User {
 
     private int userID, addressNumber, postalCode;
-    private String username, password, email, firstName, lastName, birthday, address, city, state,
+    private String username, password, email, firstName, lastName, address, city, state,
             country, phone, mobilePhone;
 
     public User(String username, String password) {
@@ -13,7 +13,7 @@ public class User {
     }
 
     public User(String username, String password, String email, String firstName,
-                String lastName, String birthday, String address, int addressNumber, int postalCode,
+                String lastName, String address, int addressNumber, int postalCode,
                 String city, String state, String country, String phone, String mobilePhone) {
         this.addressNumber = addressNumber;
         this.postalCode = postalCode;
@@ -22,7 +22,6 @@ public class User {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthday = birthday;
         this.address = address;
         this.city = city;
         this.state = state;
@@ -32,7 +31,7 @@ public class User {
     }
 
     public User(int userID, String username, String password, String email, String firstName,
-                String lastName, String birthday, String address, int addressNumber, int postalCode,
+                String lastName, String address, int addressNumber, int postalCode,
                 String city, String state, String country, String phone, String mobilePhone) {
         this.userID = userID;
         this.addressNumber = addressNumber;
@@ -42,7 +41,6 @@ public class User {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthday = birthday;
         this.address = address;
         this.city = city;
         this.state = state;
@@ -113,14 +111,6 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
     }
 
     public String getAddress() {

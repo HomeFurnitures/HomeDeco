@@ -45,9 +45,10 @@ public class Register extends AppCompatActivity {
         String phone = etPhone.getText().toString();
         String mobilePhone = etMobilePhone.getText().toString();
 
-        /*User userToRegister = new User(username, password, email, firstName,
-                 lastName, birthday, address, addressNumber, postalCode,
-         city, state, country, phone, mobilePhone);*/
+        User userToRegister = new User(username, password, email, firstName, lastName, address,
+                addressNumber, postalCode, city, state, country, phone, mobilePhone);
+
+
 
     }
 }
