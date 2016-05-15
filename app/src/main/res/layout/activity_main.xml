@@ -22,9 +22,10 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="@string/login"
         android:id="@+id/button2"
         android:layout_below="@+id/button"
         android:layout_alignEnd="@+id/button"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:onClick="showLogin"/>
 </RelativeLayout>

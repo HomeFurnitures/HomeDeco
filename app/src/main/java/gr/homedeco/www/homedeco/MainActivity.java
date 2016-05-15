@@ -19,4 +19,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intentRegister = new Intent(this, Register.class);
         startActivity(intentRegister);
     }
+
+    //Show Login Activity
+    public void showLogin(View view) {
+        Intent intentRegister = new Intent(this, Login.class);
+        startActivity(intentRegister);
+    }
 }
