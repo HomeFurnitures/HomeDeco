@@ -32,6 +32,16 @@
             android:name=".PrivateMessage"
             android:label="Συνομιλία"
             android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Products"
+            android:label="Προϊόντα"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".ProductDetails"
+            android:label="Λεπτομέρειες"
+            android:parentActivityName=".Products"
             android:windowSoftInputMode="adjustPan"/>
     </application>
 

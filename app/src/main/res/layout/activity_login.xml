@@ -48,8 +48,9 @@
     <Button
         android:id="@+id/bLogin"
         android:text="@string/login"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="logIn" />

@@ -7,6 +7,13 @@ public class Product {
     private float price, discountPrice;
     private String  SKU, name, description, shortDescription, thumbnail, image;
 
+    public Product() {
+    }
+
+    public Product(int productID) {
+        this.productID = productID;
+    }
+
     public Product(int productID, String SKU, String name, float price, float discountPrice,
                    int weight, String description, String shortDescription, String thumbnail,
                    String image, int stock, int categoryID, int orderID) {

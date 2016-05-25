@@ -16,13 +16,25 @@ public class MainActivity extends AppCompatActivity {
 
     //Show Register Activity
     public void showRegister(View view) {
-        Intent intentRegister = new Intent(this, Register.class);
-        startActivity(intentRegister);
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
     }
 
     //Show Login Activity
     public void showLogin(View view) {
-        Intent intentRegister = new Intent(this, Login.class);
-        startActivity(intentRegister);
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    //Show Product Details Activity
+    public void showProductDetails(View view) {
+        Intent intent = new Intent(this, ProductDetails.class);
+        intent.putExtra("productID", 1);
+        startActivity(intent);
+    }
+
+    public void showProducts(View view) {
+        Intent intent = new Intent(this, Products.class);
+        startActivity(intent);
     }
 }

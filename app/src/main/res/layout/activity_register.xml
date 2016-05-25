@@ -208,8 +208,9 @@
         <Button
             android:id="@+id/bRegister"
             android:text="@string/register"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textStyle="bold"
+            android:backgroundTint="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
