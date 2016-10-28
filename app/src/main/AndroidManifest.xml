@@ -2,47 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="gr.homedeco.www.homedeco">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Register"
-            android:label="Εγγραφή Χρήστη"
-            android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".Login"
-            android:label="Είσοδος Χρήστη"
-            android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".PrivateMessage"
-            android:label="Συνομιλία"
-            android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".Products"
-            android:label="Προϊόντα"
-            android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan"/>
-        <activity
-            android:name=".ProductDetails"
-            android:label="Λεπτομέρειες"
-            android:parentActivityName=".Products"
-            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>
