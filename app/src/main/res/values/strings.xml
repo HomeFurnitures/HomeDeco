@@ -28,4 +28,5 @@
     <string name="default_product_short_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</string>
     <string name="buy_now">Buy now</string>
     <string name="add_to_cart">Add to cart</string>
+    <string name="products">Προϊόντα</string>
 </resources>
