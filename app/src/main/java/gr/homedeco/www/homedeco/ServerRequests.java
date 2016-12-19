@@ -26,6 +26,10 @@ public class ServerRequests {
         progressDialog.setMessage("Παρακαλώ περιμένετε...");
     }
 
+//------------------------------------------------------------------------------------------------//
+//                                    PRODUCTS
+//------------------------------------------------------------------------------------------------//
+
     //Fetches Product's data from the server
     public User fetchProductDataInBackground(int productID, GetProductCallback productCallback) {
         progressDialog.show();

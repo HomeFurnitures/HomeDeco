@@ -20,7 +20,6 @@ public class Register extends AppCompatActivity {
         etLastName = (EditText) findViewById(R.id.etRegLastName);
         etEmail = (EditText) findViewById(R.id.etRegEmail);
         etAddress = (EditText) findViewById(R.id.etRegAddress);
-        etAddressNumber = (EditText) findViewById(R.id.etRegAddressNumber);
         etTK = (EditText) findViewById(R.id.etRegTK);
         etCity = (EditText) findViewById(R.id.etRegCity);
         etState = (EditText) findViewById(R.id.etRegState);
@@ -37,7 +36,6 @@ public class Register extends AppCompatActivity {
         String lastName = etLastName.getText().toString();
         String email = etEmail.getText().toString();
         String address = etAddress.getText().toString();
-        String addressNumber = etAddressNumber.getText().toString();
         String tk = etTK.getText().toString();
         String city = etCity.getText().toString();
         String state = etState.getText().toString();
@@ -50,7 +48,6 @@ public class Register extends AppCompatActivity {
         userToRegister.setLastName(lastName);
         userToRegister.setEmail(email);
         userToRegister.setAddress(address);
-        userToRegister.setAddressNumber(addressNumber);
         userToRegister.setPostalCode(tk);
         userToRegister.setCity(city);
         userToRegister.setState(state);

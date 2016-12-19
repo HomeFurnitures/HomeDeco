@@ -28,7 +28,7 @@ public class JSONparser {
         Product returnedProduct;
         JSONArray jArray = new JSONArray(result);
 
-        for (int i=0; i<jArray.length(); i++) {
+        for (int i = 0; i < jArray.length(); i++) {
             JSONObject jObject = jArray.getJSONObject(i);
 
             if (jObject.length() != 0) {
@@ -130,7 +130,8 @@ public class JSONparser {
 
     /**
      * Returns a JSONObject ready to be send for user registration
-     * @param  user     a User object with registration details
+     *
+     * @param user a User object with registration details
      * @return user details as a json object
      */
     public JSONObject toRegister(User user) throws JSONException {
@@ -144,7 +145,6 @@ public class JSONparser {
 
         Userdetail.put("FirstName", user.getFirstName());
         Userdetail.put("LastName", user.getLastName());
-        Userdetail.put("Address", user.getAddress() + user.getAddressNumber());
         Userdetail.put("PostalCode", user.getPostalCode());
         Userdetail.put("City", user.getCity());
         Userdetail.put("State", user.getState());
@@ -154,4 +154,37 @@ public class JSONparser {
 
         return json;
     }
+
+//------------------------------------------------------------------------------------------------//
+//                                    USER
+//------------------------------------------------------------------------------------------------//
+
+    /**
+     * Returns a User object from server's JSON response
+     *
+     * @param result server's JSON result as a string
+     * @return user details as User object
+     */
+    public User toUser(String result) throws JSONException {
+        User user = new User();
+        JSONObject json = new JSONObject(result);
+
+        user.setUsername(json.getString("Username"));
+        user.setEmail(json.getString("Email"));
+        user.setFirstName(json.getString("FirstName"));
+        user.setLastName(json.getString("LastName"));
+        user.setBirthday(json.getString("Birthday"));
+        user.setAddress(json.getString("Address"));
+        user.setPostalCode(json.getString("PostalCode"));
+        user.setCity(json.getString("City"));
+        user.setState(json.getString("State"));
+        user.setCountry(json.getString("Country"));
+        user.setPhone(json.getString("Phone"));
+        user.setMobilePhone(json.getString("MobilePhone"));
+
+        return user;
+    }
+
+
+
 }

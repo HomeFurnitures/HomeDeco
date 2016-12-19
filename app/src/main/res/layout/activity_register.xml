@@ -107,20 +107,6 @@
             android:inputType="text"/>
 
         <TextView
-            android:id="@+id/txtAddressNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:labelFor="@+id/etRegAddressNumber"
-            android:text="@string/address_number" />
-
-        <EditText
-            android:id="@id/etRegAddressNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
-
-        <TextView
             android:id="@+id/txtTK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

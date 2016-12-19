@@ -3,7 +3,7 @@ package gr.homedeco.www.homedeco;
 public class User {
 
     private int userID;
-    private String username, password, email, firstName, lastName, address, addressNumber, postalCode,
+    private String username, password, email, firstName, lastName, birthday, address, postalCode,
             city, state, country, phone, mobilePhone;
 
     public User() {
@@ -15,16 +15,16 @@ public class User {
     }
 
     public User(int userID, String username, String password, String email, String firstName,
-                String lastName, String address, String addressNumber, String postalCode, String city,
+                String lastName, String address, String birthday, String postalCode, String city,
                 String state, String country, String phone, String mobilePhone) {
         this.userID = userID;
         this.username = username;
         this.password = password;
         this.email = email;
+        this.birthday = birthday;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
-        this.addressNumber = addressNumber;
         this.postalCode = postalCode;
         this.city = city;
         this.state = state;
@@ -65,6 +65,14 @@ public class User {
         this.email = email;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -87,14 +95,6 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getAddressNumber() {
-        return addressNumber;
-    }
-
-    public void setAddressNumber(String addressNumber) {
-        this.addressNumber = addressNumber;
     }
 
     public String getPostalCode() {
