@@ -12,9 +12,16 @@ public class JSONparser {
     public JSONparser() {
     }
 
-    //------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------//
 //                                    PRODUCTS
 //------------------------------------------------------------------------------------------------//
+
+    /**
+     * Returns a product list of all products
+     *
+     * @param result all products server's response as a string
+     * @return all products as an List of Product objects
+     */
     public List<Product> toProduct(String result) throws JSONException {
 
         List<Product> products = new ArrayList<>();
@@ -34,6 +41,7 @@ public class JSONparser {
                 String desc = jObject.getString("Description");
                 String shortDesc = jObject.getString("ShortDescription");
                 String image = jObject.getString("Image");
+                int stock = jObject.getInt("Stock");
                 int categoryID = jObject.getInt("CategoryID");
 
                 returnedProduct = new Product();
@@ -46,6 +54,7 @@ public class JSONparser {
                 returnedProduct.setDescription(desc);
                 returnedProduct.setShortDescription(shortDesc);
                 returnedProduct.setImage(image);
+                returnedProduct.setStock(stock);
                 returnedProduct.setCategoryID(categoryID);
 
                 products.add(returnedProduct);
