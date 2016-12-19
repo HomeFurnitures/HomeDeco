@@ -21,7 +21,7 @@
         <activity android:name=".Register" />
         <activity android:name=".Products" />
         <activity android:name=".PrivateMessage" />
-        <activity android:name=".ProductDetails"></activity>
+        <activity android:name=".ProductDetails" />
     </application>
 
 </manifest>
