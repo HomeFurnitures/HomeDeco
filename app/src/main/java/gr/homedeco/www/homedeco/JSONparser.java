@@ -27,6 +27,7 @@ public class JSONparser {
         List<Product> products = new ArrayList<>();
         Product returnedProduct;
         JSONArray jArray = new JSONArray(result);
+        int stock = 0;
 
         for (int i = 0; i < jArray.length(); i++) {
             JSONObject jObject = jArray.getJSONObject(i);
@@ -41,7 +42,9 @@ public class JSONparser {
                 String desc = jObject.getString("Description");
                 String shortDesc = jObject.getString("ShortDescription");
                 String image = jObject.getString("Image");
-                int stock = jObject.getInt("Stock");
+                if (!jObject.isNull("Stock")) {
+                    stock = jObject.getInt("Stock");
+                }
                 int categoryID = jObject.getInt("CategoryID");
 
                 returnedProduct = new Product();

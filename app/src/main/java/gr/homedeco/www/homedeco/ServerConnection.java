@@ -31,7 +31,7 @@ public class ServerConnection {
     }
 
     //Establishes a HttpURLConnection with POST as a RequestMethod
-    private HttpURLConnection openPostConnection(String uri) {
+    public HttpURLConnection openPostConnection(String uri) {
 
         try {
             URL url = new URL(SERVER_ADDRESS + uri);
@@ -40,8 +40,9 @@ public class ServerConnection {
             urlConnection.setReadTimeout(10000);
             urlConnection.setConnectTimeout(15000);
             urlConnection.setRequestMethod("POST");
-            urlConnection.setDoInput(true);
+            urlConnection.setUseCaches(false);
             urlConnection.setDoOutput(true);
+            urlConnection.setDoInput(true);
 
         } catch (IOException e) {
             e.printStackTrace();
