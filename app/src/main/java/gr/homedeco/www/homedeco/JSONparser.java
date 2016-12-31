@@ -98,8 +98,8 @@ public class JSONparser {
     public JSONObject toLogin(User user) throws JSONException {
         JSONObject json = new JSONObject();
 
-        json.put("username", user.getUsername());
-        json.put("password", user.getPassword());
+        json.put("Username", user.getUsername());
+        json.put("Password", user.getPassword());
 
         return json;
     }
@@ -154,6 +154,9 @@ public class JSONparser {
         Userdetail.put("Country", user.getCountry());
         Userdetail.put("Phone", user.getPhone());
         Userdetail.put("MobilePhone", user.getMobilePhone());
+
+        json.put("User", User);
+        json.put("Userdetail", Userdetail);
 
         return json;
     }

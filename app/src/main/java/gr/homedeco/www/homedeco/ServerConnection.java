@@ -36,12 +36,15 @@ public class ServerConnection {
         try {
             URL url = new URL(SERVER_ADDRESS + uri);
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setChunkedStreamingMode(0);
-            urlConnection.setReadTimeout(10000);
-            urlConnection.setConnectTimeout(15000);
+            urlConnection.setDoOutput(true);
             urlConnection.setRequestMethod("POST");
             urlConnection.setUseCaches(false);
-            urlConnection.setDoOutput(true);
+            urlConnection.setConnectTimeout(15000);
+            urlConnection.setReadTimeout(10000);
+            urlConnection.setRequestProperty("Content-Type", "application/json");
+            urlConnection.setRequestProperty("Accept", "application/json");
+            // urlConnection.setChunkedStreamingMode(0);
+
             urlConnection.setDoInput(true);
 
         } catch (IOException e) {

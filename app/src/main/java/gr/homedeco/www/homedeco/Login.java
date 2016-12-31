@@ -2,7 +2,6 @@ package gr.homedeco.www.homedeco;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -33,7 +32,7 @@ public class Login extends AppCompatActivity {
         serverRequest.login(userToLogin, new GetLoginCallback() {
             @Override
             public void done(String response) {
-                Log.d("EPISTROFI", "response: " + response);
+
             }
         });
     }

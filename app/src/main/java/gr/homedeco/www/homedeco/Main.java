@@ -1,11 +1,14 @@
 package gr.homedeco.www.homedeco;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class Main extends AppCompatActivity {
+
+    private SharedPreferences localDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

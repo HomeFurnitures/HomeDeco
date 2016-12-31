@@ -123,8 +123,6 @@ public class ServerRequests {
             JSONparser parser = new JSONparser();
 
             urlConnection = connection.openPostConnection("/login");
-            urlConnection.setRequestProperty("Content-Type", "application/json");
-            urlConnection.setRequestProperty("Accept", "application/json");
 
             try {
 
@@ -138,14 +136,14 @@ public class ServerRequests {
                 InputStream is = urlConnection.getInputStream();
                 reader = new BufferedReader(new InputStreamReader(is));
 
-                StringBuffer buffer = new StringBuffer();
+                StringBuilder strBuilder = new StringBuilder();
 
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    buffer.append(line);
+                    strBuilder.append(line);
                 }
 
-                String result = buffer.toString();
+                String result = strBuilder.toString();
                 authToken = parser.loginResponse(result);
 
 
