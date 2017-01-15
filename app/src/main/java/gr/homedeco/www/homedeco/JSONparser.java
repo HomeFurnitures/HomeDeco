@@ -82,8 +82,8 @@ public class JSONparser {
         String authToken = null;
         JSONObject jObject = new JSONObject(result);
 
-        if (jObject.has("x-my-token")) {
-            authToken = jObject.getString("x-my-token");
+        if (jObject.has("android-token")) {
+            authToken = jObject.getString("android-token");
         }
 
         return authToken;
@@ -98,8 +98,8 @@ public class JSONparser {
     public JSONObject toLogin(User user) throws JSONException {
         JSONObject json = new JSONObject();
 
-        json.put("Username", user.getUsername());
-        json.put("Password", user.getPassword());
+        json.put("username", user.getUsername());
+        json.put("password", user.getPassword());
 
         return json;
     }

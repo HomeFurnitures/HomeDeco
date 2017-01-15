@@ -17,7 +17,7 @@ public class LocalDatabase {
     public void setLoggedIn(boolean loggedIn, String authToken) {
         SharedPreferences.Editor spEditor = localDatabase.edit();
         spEditor.putBoolean("loggedIn", loggedIn);
-        spEditor.putString("x-my-token", authToken);
+        spEditor.putString("authToken", authToken);
         spEditor.apply();
     }
 
@@ -48,6 +48,17 @@ public class LocalDatabase {
     public void clearLocalDatabase() {
         SharedPreferences.Editor spEditor = localDatabase.edit();
         spEditor.clear().apply();
+    }
+
+    public String getAuthToken() {
+        return localDatabase.getString("authToken", "");
+    }
+
+    public void setRememberMe(User user) {
+        SharedPreferences.Editor spEditor = localDatabase.edit();
+        spEditor.putString("usernameRemember", user.getUsername());
+        spEditor.putString("passwordRemember", user.getPassword());
+        spEditor.apply();
     }
 
 

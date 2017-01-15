@@ -22,6 +22,7 @@ public class ServerConnection {
             urlConnection.setConnectTimeout(15000);
             urlConnection.setRequestMethod("GET");
             urlConnection.setDoInput(true);
+            urlConnection.setRequestProperty("Accept", "application/json");
 
         } catch (IOException e) {
             e.printStackTrace();
