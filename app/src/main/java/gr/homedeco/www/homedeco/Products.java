@@ -30,7 +30,6 @@ public class Products extends AppCompatActivity {
 
     private void populateProductsList(List<Product> returnedList) {
 
-
         ListAdapter myAdapter = new CustomProductsAdapter(this, returnedList);
         ListView friendListView = (ListView) findViewById(R.id.lvProducts);
         friendListView.setAdapter(myAdapter);

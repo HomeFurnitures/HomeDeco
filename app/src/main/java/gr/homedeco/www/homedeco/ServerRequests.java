@@ -127,6 +127,7 @@ public class ServerRequests {
             JSONparser parser = new JSONparser();
 
             urlConnection = connection.openPostConnection("/login");
+            urlConnection.setRequestProperty("android", "true");
 
             try {
 
@@ -193,6 +194,7 @@ public class ServerRequests {
 
             urlConnection = connection.openGetConnection("/user/self");
             urlConnection.setRequestProperty("android", "true");
+            urlConnection.setRequestProperty("android-token", localDatabase.getAuthToken());
 
             try {
 
