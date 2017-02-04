@@ -2,18 +2,20 @@ package gr.homedeco.www.homedeco;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListAdapter;
-import android.widget.ListView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
 public class Products extends AppCompatActivity {
 
+    private RecyclerView recyclerView;
+    private ProductsAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
-
         getProducts();
     }
 
@@ -30,9 +32,15 @@ public class Products extends AppCompatActivity {
 
     private void populateProductsList(List<Product> returnedList) {
 
-        ListAdapter myAdapter = new CustomProductsAdapter(this, returnedList);
-        ListView friendListView = (ListView) findViewById(R.id.lvProducts);
-        friendListView.setAdapter(myAdapter);
-        friendListView.setItemsCanFocus(true);
+        recyclerView = (RecyclerView) findViewById(R.id.rvProducts);
+        adapter = new ProductsAdapter(returnedList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Products.this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+//        ListAdapter myAdapter = new CustomProductsAdapter(this, returnedList);
+//        ListView friendListView = (ListView) findViewById(R.id.lvProducts);
+//        friendListView.setAdapter(myAdapter);
+//        friendListView.setItemsCanFocus(true);
     }
 }
