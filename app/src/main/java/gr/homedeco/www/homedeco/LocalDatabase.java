@@ -3,6 +3,8 @@ package gr.homedeco.www.homedeco;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.util.List;
+
 public class LocalDatabase {
 
     private static final String PREFS_NAME = "LocalDatabase";
@@ -39,12 +41,30 @@ public class LocalDatabase {
         spEditor.apply();
     }
 
-    //Check if the user is logged in
+    // Stores a list of all the products
+    public void saveProducts(List<Product> products) {
+
+    }
+
+    // Add to user's cart
+    public void addToCart(int productID) {
+        String cart = localDatabase.getString("cart", "");
+        SharedPreferences.Editor spEditor = localDatabase.edit();
+        spEditor.putString("cart", cart + String.valueOf(productID) + ",");
+        spEditor.apply();
+    }
+
+    // Get user's cart
+    public String getCart() {
+        return localDatabase.getString("cart", "");
+    }
+
+    // Check if the user is logged in
     public boolean isLoggedIn() {
         return localDatabase.getBoolean("loggedIn", false);
     }
 
-    //Clears local user Database
+    // Clears local user Database
     public void clearLocalDatabase() {
         SharedPreferences.Editor spEditor = localDatabase.edit();
         spEditor.clear().apply();

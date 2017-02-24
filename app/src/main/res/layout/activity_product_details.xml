@@ -28,7 +28,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="30dp"
-            android:text="@string/default_product_name"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -38,7 +37,6 @@
             android:layout_alignParentEnd="true"
             android:layout_below="@id/tvProductName"
             android:layout_marginTop="5dp"
-            android:text="@string/default_product_price"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#008000"
             android:textStyle="bold" />
@@ -58,7 +56,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/default_product_desc" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#6C7A89"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,6 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/colorPrimary"
+            android:onClick="addToCart"
             android:text="@string/add_to_cart"
             android:textColor="@color/white"
             android:textStyle="bold"/>

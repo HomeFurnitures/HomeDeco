@@ -2,8 +2,10 @@ package gr.homedeco.www.homedeco;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -14,6 +16,7 @@ public class ProductDetails extends AppCompatActivity {
     private ImageView imgProductPhoto;
     private TextView tvProductName, tvProductPrice, tvProductDesc;
     private int productID;
+    private LocalDatabase localDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,7 @@ public class ProductDetails extends AppCompatActivity {
         tvProductName = (TextView) findViewById(R.id.tvProductName);
         tvProductPrice = (TextView) findViewById(R.id.tvProductPrice);
         tvProductDesc = (TextView) findViewById(R.id.tvProductDesc);
+        localDatabase = new LocalDatabase(this);
 
         //Server Request for specific product details
         ServerRequests serverRequest = new ServerRequests(this);
@@ -46,5 +50,10 @@ public class ProductDetails extends AppCompatActivity {
         String priceText = String.valueOf(product.getPrice()) + " €";
         tvProductPrice.setText(priceText);
         tvProductDesc.setText(product.getDescription());
+    }
+
+    public void addToCart(View view) {
+        localDatabase.addToCart(productID);
+        Toast.makeText(getApplicationContext(), "Product added to cart", Toast.LENGTH_SHORT).show();
     }
 }

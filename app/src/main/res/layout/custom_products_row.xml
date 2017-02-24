@@ -7,6 +7,36 @@
     card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvProductsName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="@string/default_product_short_desc"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvProductsPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="@string/default_product_short_desc"
+            android:textAlignment="textEnd"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#008000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +48,7 @@
             android:id="@+id/imgvProductsPhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_marginTop="30dp"
             android:contentDescription="@string/content_description"
             android:src="@drawable/ic_action_image"/>
 
@@ -27,53 +57,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/default_product_short_desc" />
+            android:text="@string/default_product_short_desc"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#6C7A89"
+            android:textStyle="bold" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:background="@color/light_gray" />
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tvProductsID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:visibility="gone" />
 
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/content_description"
-                android:src="@drawable/ic_action_add_to_cart" />
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/content_description"
-                android:src="@drawable/ic_action_checkout" />
-        </LinearLayout>
-
-        <!--&lt;!&ndash; TextView Employee Name &ndash;&gt;-->
-        <!--<TextView-->
-        <!--android:id="@+id/txt_employee_name"-->
+        <!--<View-->
         <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
+        <!--android:layout_height="2dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@color/light_gray" />-->
 
-        <!--&lt;!&ndash; TextView Employee Email &ndash;&gt;-->
-        <!--<TextView-->
-        <!--android:id="@+id/txt_employee_email"-->
+        <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2">-->
 
-        <!--&lt;!&ndash; TextView Employee Phone &ndash;&gt;-->
-        <!--<TextView-->
-        <!--android:id="@+id/txt_employee_phone"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
+        <!--<ImageButton-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:backgroundTint="@color/colorPrimary"-->
+        <!--android:contentDescription="@string/content_description"-->
+        <!--android:src="@drawable/ic_action_add_to_cart"-->
+        <!--android:onClick="test"/>-->
+
+        <!--<ImageButton-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:backgroundTint="@color/colorPrimary"-->
+        <!--android:contentDescription="@string/content_description"-->
+        <!--android:src="@drawable/ic_action_checkout" />-->
+        <!--</LinearLayout>-->
 
     </LinearLayout>
 

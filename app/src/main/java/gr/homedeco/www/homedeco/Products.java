@@ -37,10 +37,5 @@ public class Products extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Products.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
-//        ListAdapter myAdapter = new CustomProductsAdapter(this, returnedList);
-//        ListView friendListView = (ListView) findViewById(R.id.lvProducts);
-//        friendListView.setAdapter(myAdapter);
-//        friendListView.setItemsCanFocus(true);
     }
 }
