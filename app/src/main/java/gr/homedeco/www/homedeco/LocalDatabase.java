@@ -41,6 +41,11 @@ public class LocalDatabase {
         spEditor.apply();
     }
 
+    // Get user's username
+    public String getUsername() {
+        return localDatabase.getString("username", "");
+    }
+
     // Stores a list of all the products
     public void saveProducts(List<Product> products) {
 

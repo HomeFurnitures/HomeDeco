@@ -75,7 +75,7 @@
             android:onClick="addToCart"
             android:text="@string/add_to_cart"
             android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0dp"
@@ -84,7 +84,7 @@
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/buy_now"
             android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 

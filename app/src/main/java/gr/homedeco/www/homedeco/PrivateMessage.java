@@ -1,27 +1,39 @@
 package gr.homedeco.www.homedeco;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ListView;
+public class PrivateMessage {
 
-public class PrivateMessage extends AppCompatActivity {
+    private String sender, receiver, message;
 
-    private EditText etMessage;
-    private ListView lvPrivateChat;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_private_message);
-
-        etMessage = (EditText) findViewById(R.id.etMessage);
-        lvPrivateChat = (ListView) findViewById(R.id.lvPrivateChat);
+    public PrivateMessage() {
     }
 
-    public void sendPrivateMessage(View view) {
+    public PrivateMessage(String sender, String receiver, String message) {
+        this.sender = sender;
+        this.receiver = receiver;
+        this.message = message;
+    }
 
-        String message = etMessage.getText().toString();
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

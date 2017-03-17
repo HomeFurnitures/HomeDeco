@@ -14,6 +14,8 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
     //Show Register Activity
@@ -37,6 +39,16 @@ public class Main extends AppCompatActivity {
 
     public void showProducts(View view) {
         Intent intent = new Intent(this, Products.class);
+        startActivity(intent);
+    }
+
+    public void showCart(View view) {
+        Intent intent = new Intent(this, Cart.class);
+        startActivity(intent);
+    }
+
+    public void showChat(View view) {
+        Intent intent = new Intent(this, Chat.class);
         startActivity(intent);
     }
 }

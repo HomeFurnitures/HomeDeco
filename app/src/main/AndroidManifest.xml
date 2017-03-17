@@ -17,12 +17,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login" />
-        <activity android:name=".Register" />
-        <activity android:name=".Products" />
-        <activity android:name=".PrivateMessage" />
-        <activity android:name=".ProductDetails" />
-        <activity android:name=".Cart"></activity>
+        <activity
+            android:name=".Login"
+            android:label="Είσοδος χρήστη"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Register"
+            android:label="Εγγραφή"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Products"
+            android:label="Προϊόντα" />
+        <activity
+            android:name=".ProductDetails"
+            android:label="Λεπτομέρειες" />
+        <activity
+            android:name=".Cart"
+            android:label="Καλάθι" />
+        <activity
+            android:name=".Chat"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

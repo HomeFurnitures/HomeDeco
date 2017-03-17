@@ -34,4 +34,16 @@
         android:layout_height="wrap_content"
         android:onClick="showProductDetails"
         android:text="@string/products"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showCart"
+        android:text="@string/cart" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showChat"
+        android:text="@string/chat" />
 </LinearLayout>
