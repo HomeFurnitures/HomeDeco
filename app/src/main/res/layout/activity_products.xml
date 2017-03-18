@@ -19,19 +19,19 @@
 
         <Spinner
             android:id="@+id/spCategory"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:entries="@array/product_filters_category"
-            android:prompt="@string/category" />
+            android:spinnerMode="dropdown" />
 
         <Spinner
             android:id="@+id/spSubCategory"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:entries="@array/product_filters_category"
-            android:prompt="@string/category" />
+            android:entries="@array/product_filters_subCategory_bedroom"
+            android:spinnerMode="dropdown" />
 
     </LinearLayout>
 

@@ -36,24 +36,28 @@
     <string name="category">Κατηγορία</string>
 
     <string-array name="product_filters_category">
+        <item>Κατηγορία</item>
         <item>Γραφείο</item>
         <item>Καθιστικό</item>
         <item>Υπνοδωμάτιο</item>
     </string-array>
 
     <string-array name="product_filters_subCategory_desk">
+        <item>Υποκατηγορία</item>
         <item>Αποθήκευση γραφείου</item>
         <item>Γραφεία</item>
         <item>Καρέκλες γραφείου</item>
     </string-array>
 
     <string-array name="product_filters_subCategory_livingRoom">
+        <item>Υποκατηγορία</item>
         <item>Έπιπλα τηλεόρασης</item>
         <item>Καναπέδες</item>
         <item>Τραπέζια σαλονιού</item>
     </string-array>
 
     <string-array name="product_filters_subCategory_bedroom">
+        <item>Υποκατηγορία</item>
         <item>Κρεβάτια</item>
         <item>Ντουλάπες</item>
         <item>Συρταριέρες αποθήκευσης</item>

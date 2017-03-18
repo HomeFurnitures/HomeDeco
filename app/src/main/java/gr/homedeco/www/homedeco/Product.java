@@ -2,7 +2,7 @@ package gr.homedeco.www.homedeco;
 
 public class Product {
 
-    private int productID, weight, stock, categoryID, orderID;
+    private int productID, weight, stock, categoryID, subCategoryID, orderID;
     private double price, discountPrice;
     private String  SKU, name, description, shortDescription, thumbnail, image;
 
@@ -13,13 +13,14 @@ public class Product {
         this.productID = productID;
     }
 
-    public Product(int productID, int weight, int stock, int categoryID, int orderID, double price,
+    public Product(int productID, int weight, int stock, int categoryID, int subCategoryID, int orderID, double price,
                    double discountPrice, String SKU, String name, String description,
                    String shortDescription, String thumbnail, String image) {
         this.productID = productID;
         this.weight = weight;
         this.stock = stock;
         this.categoryID = categoryID;
+        this.subCategoryID = subCategoryID;
         this.orderID = orderID;
         this.price = price;
         this.discountPrice = discountPrice;
@@ -61,6 +62,14 @@ public class Product {
 
     public void setCategoryID(int categoryID) {
         this.categoryID = categoryID;
+    }
+
+    public int getSubCategoryID() {
+        return subCategoryID;
+    }
+
+    public void setSubCategoryID(int subCategoryID) {
+        this.subCategoryID = subCategoryID;
     }
 
     public int getOrderID() {
