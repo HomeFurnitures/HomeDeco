@@ -10,8 +10,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3.5"
-        android:textAlignment="textStart"
+        android:gravity="center_vertical"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
@@ -19,9 +20,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3.5"
-        android:textAlignment="center"
+        android:gravity="center_vertical|center_horizontal"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#008000"
+        android:textColor="@color/price"
         android:textStyle="bold" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -36,12 +37,14 @@
             android:layout_height="match_parent"
             android:visibility="gone" />
 
-        <Button
+        <ImageButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
+            android:backgroundTintMode="src_over"
             android:contentDescription="@string/content_description"
-            android:text="X"
+            android:elevation="0dp"
+            android:src="@drawable/ic_action_delete"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
