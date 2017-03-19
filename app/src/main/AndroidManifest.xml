@@ -20,22 +20,29 @@
         <activity
             android:name=".Login"
             android:label="Είσοδος χρήστη"
+            android:parentActivityName=".Main"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Register"
             android:label="Εγγραφή"
+            android:parentActivityName=".Main"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Products"
-            android:label="Προϊόντα" />
+            android:label="Προϊόντα"
+            android:parentActivityName=".Main" />
         <activity
             android:name=".ProductDetails"
-            android:label="Λεπτομέρειες" />
+            android:label="Λεπτομέρειες"
+            android:parentActivityName=".Products"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Cart"
-            android:label="Καλάθι" />
+            android:label="Καλάθι"
+            android:parentActivityName=".Main" />
         <activity
             android:name=".Chat"
+            android:parentActivityName=".Main"
             android:windowSoftInputMode="adjustPan" />
     </application>
 
