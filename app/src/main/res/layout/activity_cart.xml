@@ -113,6 +113,7 @@
         android:layout_gravity="end"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/colorPrimary"
+        android:onClick="checkout"
         android:text="@string/buy_now"
         android:textColor="@color/white"
         android:textStyle="bold" />

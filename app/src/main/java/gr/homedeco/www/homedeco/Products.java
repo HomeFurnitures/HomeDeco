@@ -1,10 +1,13 @@
 package gr.homedeco.www.homedeco;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,7 +43,25 @@ public class Products extends AppCompatActivity {
         spSubCategory.setAdapter(adapterSpSubcategory);
     }
 
-// ---------------------------------------- HELPERS  ---------------------------------------------//
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.generic_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //Start Login Activity
+    public void showLogin(MenuItem item) {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    //Start About Us Activity
+    public void showAboutUs(MenuItem item) {
+        Intent intent = new Intent(this, AboutUs.class);
+        startActivity(intent);
+    }
+
+    // ---------------------------------------- HELPERS  ---------------------------------------------//
     
     private void populateProductsList(List<Product> returnedList) {
 

@@ -9,41 +9,69 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="2"
     tools:context="gr.homedeco.www.homedeco.Main">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showRegister"
-        android:text="@string/register"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/homedeco_logo" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showLogin"
-        android:text="@string/login"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showProducts"
-        android:text="@string/products"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#F1F0F0"
+            android:backgroundTintMode="multiply"
+            android:onClick="showProducts"
+            android:src="@drawable/ic_action_products" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showProductDetails"
-        android:text="@string/products"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="showCart"
+            android:src="@drawable/ic_action_cart" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showCart"
-        android:text="@string/cart" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showChat"
-        android:text="@string/chat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:backgroundTintMode="multiply"
+            android:onClick="showChat"
+            android:src="@drawable/ic_action_contact" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#F1F0F0"
+            android:backgroundTintMode="multiply"
+            android:onClick="showLogin"
+            android:src="@drawable/ic_action_user" />
+
+
+    </LinearLayout>
+
 </LinearLayout>

@@ -1,9 +1,17 @@
 package gr.homedeco.www.homedeco;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,13 +21,21 @@ public class Cart extends AppCompatActivity {
     private LocalDatabase localDatabase;
     private RecyclerView recyclerView;
     private CartAdapter adapter;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
         localDatabase = new LocalDatabase(this);
+        context = getApplicationContext();
         getCart();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.generic_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     private void getCart() {
@@ -91,5 +107,36 @@ public class Cart extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Cart.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+    }
+
+    public void checkout(View view) {
+        AlertDialog builder = new AlertDialog.Builder(Cart.this).create();
+        LayoutInflater inflater = Cart.this.getLayoutInflater();
+        builder.setView(inflater.inflate(R.layout.activity_checkout_dialog, null));
+        builder.setButton(AlertDialog.BUTTON_NEUTRAL, "Χρηστης",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        builder.setButton(AlertDialog.BUTTON_POSITIVE, "Επισκεπτης",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        builder.show();
+    }
+
+    //Start Login Activity
+    public void showLogin(MenuItem item) {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    //Start About Us Activity
+    public void showAboutUs(MenuItem item) {
+        Intent intent = new Intent(this, AboutUs.class);
+        startActivity(intent);
     }
 }
