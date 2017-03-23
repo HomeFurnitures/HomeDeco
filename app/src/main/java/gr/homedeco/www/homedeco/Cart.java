@@ -116,7 +116,7 @@ public class Cart extends AppCompatActivity {
         builder.setButton(AlertDialog.BUTTON_NEUTRAL, "Χρηστης",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
+                        showLoginDialog();
                     }
                 });
         builder.setButton(AlertDialog.BUTTON_POSITIVE, "Επισκεπτης",
@@ -130,6 +130,11 @@ public class Cart extends AppCompatActivity {
 
     //Start Login Activity
     public void showLogin(MenuItem item) {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    private void showLoginDialog() {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }

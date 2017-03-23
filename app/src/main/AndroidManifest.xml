@@ -27,7 +27,7 @@
         <activity
             android:name=".Register"
             android:label="Εγγραφή"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".Login"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Products"
@@ -51,6 +51,7 @@
             android:name=".AboutUs"
             android:label="Λίγα λόγια"
             android:parentActivityName=".Main" />
+        <activity android:name=".CustomProduct"></activity>
     </application>
 
 </manifest>

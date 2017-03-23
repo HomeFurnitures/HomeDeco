@@ -1,7 +1,11 @@
 package gr.homedeco.www.homedeco;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -78,5 +82,29 @@ public class ProductDetails extends AppCompatActivity {
     public void addToCart(View view) {
         localDatabase.addToCart(productID);
         Toast.makeText(getApplicationContext(), "Product added to cart", Toast.LENGTH_SHORT).show();
+    }
+
+    public void checkout(View view) {
+        AlertDialog builder = new AlertDialog.Builder(ProductDetails.this).create();
+        LayoutInflater inflater = ProductDetails.this.getLayoutInflater();
+        builder.setView(inflater.inflate(R.layout.activity_checkout_dialog, null));
+        builder.setButton(AlertDialog.BUTTON_NEUTRAL, "Χρηστης",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        showLoginDialog();
+                    }
+                });
+        builder.setButton(AlertDialog.BUTTON_POSITIVE, "Επισκεπτης",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        builder.show();
+    }
+
+    private void showLoginDialog() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
 }
